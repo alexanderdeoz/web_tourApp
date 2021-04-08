@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="/css/registro.css">
+  </head>
+  <body>
+    <section class="form-login">
+      <h5>Registro TOURAPP</h5>
+      <form method="POST" action="/Registro">
+      <input class="controls"  placeholder="Nombres" id="nombre">
+      <input class="controls"  placeholder="apellidos" id="apellido">
+      <input class="controls"  placeholder="Usuario" id="usuario">
+      <input class="controls"  placeholder="email" id="email">
+      <input class="controls"  placeholder="password" id="pasword">
+      <button class="buttons" type="submit" onclick="registrar()"> Ingresar</button>
+
+     <button onclick="limpiar()" class="buttons">limpiar</button>
+    </form>
+      <a href="/">Regresar</a>
+      <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+   
+
+    </section>
+
+  </body>
+
+<script>
+function limpiar(){
+document.getElementById("nombre").value="";
+document.getElementById("apellido").value="";
+document.getElementById("email").value="";
+document.getElementById("pasword").value="";
+document.getElementById("usuario").value="";
+}
+function registrar(){
+let  nombre = document.getElementById("nombre").value;
+let apellido =document.getElementById("apellido").value;
+let email= document.getElementById("email").value;
+let pasword = document.getElementById("pasword").value;
+let usuario = document.getElementById("usuario").value;
+
+if (nombre ==''||apellido==''||usuario==""||email==''||pasword==''||){
+alert("uno de los campos esta vasio");
+}else{
+    alert("se a registrado con exito");
+}
+}
+</script>
+
+</html>
